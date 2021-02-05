@@ -240,29 +240,27 @@ void initSerial(){
 
 void  configReset() {
   Serial.println(F("Assumindo valores da configuração padrão"));
-  strlcpy(ID_esp,             "Servidor"          , sizeof(ID_esp)); 
+  strlcpy(ID_esp,             "Servidor"        , sizeof(ID_esp)); 
 //  bootCount  = 0;
-  strlcpy(ssid,             "adriene.vivo"     , sizeof(ssid));
-  strlcpy(pw,               "developer"        , sizeof(pw)); 
-//  strlcpy(ssid,             "wiff_sala"         , sizeof(ssid));
-//  strlcpy(pw,               "pedroludovico"     , sizeof(pw)); 
+  strlcpy(ssid,             ""                  , sizeof(ssid));
+  strlcpy(pw,               ""                  , sizeof(pw)); 
   strlcpy(hostnameOTA,      "EspD1miniServ"     , sizeof(hostnameOTA)); 
-  strlcpy(IPfixo,           "192.168.15.110"    , sizeof(IPfixo));
+  strlcpy(IPfixo,           "192.168.0.0"       , sizeof(IPfixo));
   //MQTT
   strlcpy(ID_MQTT,          "casa1014Serv"      , sizeof(ID_MQTT));
   //strlcpy(HOST_MQTT,      "broker.hivemq.com" , sizeof(HOST_MQTT));
-  strlcpy(HOST_MQTT,        "192.168.15.110"    , sizeof(HOST_MQTT)); //broker ESP_Sala
+  strlcpy(HOST_MQTT,        "192.168.0.0"       , sizeof(HOST_MQTT)); //broker ESP_Sala
   PORT_MQTT = 1883;
-  strlcpy(USER_MQTT,        "admin"            , sizeof(USER_MQTT)); 
-  strlcpy(PASS_MQTT,        "developer@2020"   , sizeof(PASS_MQTT)); 
-  strlcpy(TOPICO_SUBSCRIBE, "casa1014/serv/sub", sizeof(TOPICO_SUBSCRIBE)); 
-  strlcpy(TOPICO_PUBLISH,   "casa1014/serv/pub", sizeof(TOPICO_PUBLISH)); 
-  strlcpy(TOPICO_PUBLISH_T, "casa1014/serv/t"  , sizeof(TOPICO_PUBLISH_T)); 
-  strlcpy(TOPICO_PUBLISH_H, "casa1014/serv/h"  , sizeof(TOPICO_PUBLISH_H)); 
+  strlcpy(USER_MQTT,        "admin"             , sizeof(USER_MQTT)); 
+  strlcpy(PASS_MQTT,        "***"   , sizeof(PASS_MQTT)); 
+  strlcpy(TOPICO_SUBSCRIBE, "*/serv/sub"        , sizeof(TOPICO_SUBSCRIBE)); 
+  strlcpy(TOPICO_PUBLISH,   "*/serv/pub"        , sizeof(TOPICO_PUBLISH)); 
+  strlcpy(TOPICO_PUBLISH_T, "*/serv/t"          , sizeof(TOPICO_PUBLISH_T)); 
+  strlcpy(TOPICO_PUBLISH_H, "*/serv/h"          , sizeof(TOPICO_PUBLISH_H)); 
 //
-  strlcpy(cRele1,           "rele1"            , sizeof(cRele1));
-  strlcpy(cRele2,           "rele2"            , sizeof(cRele2));
-//  strlcpy(cSensores,        "Servidor "        , sizeof(cSensores));
+  strlcpy(cRele1,           "rele1"             , sizeof(cRele1));
+  strlcpy(cRele2,           "rele2"             , sizeof(cRele2));
+//strlcpy(cSensores,        "Servidor "        , sizeof(cSensores));
   i_horas     = 0;
   i_minutos   = 0;
   ihrsProgIni = 8;
