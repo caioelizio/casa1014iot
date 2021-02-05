@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="version" content=#versao#>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>#ID_esp#</title>
+</head>
+<body>
+  <div class="col-md-5">
+    <div class="alert alert-success text-center"> <!--verde-->
+      <h2 class="text-center">
+           Dashboard #ID_esp#
+      </h2>
+      <h6>
+        <a href="dashboard">Dashboard</a> |
+        <a href="info">Informações</a> |
+        <a href="config">Configuração</a>
+      </h6>
+    </div>
+  
+    <div class="alert alert-success text-center" role="alert"> <!--verde-->
+      <!--Botoes-->
+      <div class="row row-cols-2 d-flex justify-content-center">
+        <div class="col-3">
+          #cRele1#
+        </div>
+        <div class="col-7">
+          <a href="/rele1on">
+            <button class="btn btn-lg btn-success" type="button">
+              ON&nbsp
+            </button>
+          </a>
+          <a href="/rele1off">
+            <button class="btn btn-lg btn-danger" type="button">
+              OFF
+            </button>
+          </a>
+          #sStatus_Rele1#
+        </div>
+      </div>
+      <BR>
+      <div class="row row-cols-2 d-flex justify-content-center">
+        <div class="col-3">
+          #cRele2#
+        </div>
+        <div class="col-7">
+          <a href="/rele2on">
+            <button class="btn btn-lg btn-success" type="button">
+              ON&nbsp
+            </button>
+          </a>
+          <a href="/rele2off">
+            <button class="btn btn-lg btn-danger" type="button">
+              OFF
+            </button>
+          </a>
+          #sStatus_Rele2#
+        </div>
+      </div>
+
+      <BR>
+        <div class="row row-cols-2 d-flex justify-content-center">
+          <div class="col-3">
+            Time Luz
+          </div>
+          <div class="col-7">
+            <a href="/timeluzon">
+              <button class="btn btn-lg btn-success" type="button">
+                ON&nbsp
+              </button>
+            </a>
+            <a href="/timeluzoff">
+              <button class="btn btn-lg btn-danger" type="button">
+                OFF
+              </button>
+            </a>
+            #sStatusTime#
+          </div>
+        </div>
+  
+        <BR>
+  	      Inicio: #ihrsProgIni# hrs / Fim: #ihrsProgFin# hrs
+        <BR>
+          Som: #iSomTeclas#
+    </div><!--FIM verde-->
+    
+    <div class="alert alert-danger text-center"> <!--vermelho-->
+      <a href="/tudoff">
+        <button class="btn btn-lg btn-danger" type="button">
+          Tudo off
+        </button>
+      </a>
+    </div>
+    <!--FIM Botoes-->
+
+    <div class="alert alert-info text-center" role="alert"> <!--azul-->
+      <h5 class="panel-title">
+        Sensores
+      </h5>
+      <div class="container">
+        <!--Sensores Bancada-->
+        <div class="row row-cols-3 d-flex justify-content-center">
+          <div class="col-2">
+            Servidor
+          </div>
+          <div class="col-4.5">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z"/>
+              <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              <path fill-rule="evenodd" d="M8 1.75a.25.25 0 0 1 .25.25v10a.25.25 0 1 1-.5 0V2A.25.25 0 0 1 8 1.75z"/>
+            </svg>
+            <span class="label label-info">
+              #s_temp# ºC
+            </span>
+          </div>
+          <div class="col-4.5">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+              <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <span class="label label-info">
+              #s_humid# %
+            </span>
+          </div>
+        </div>
+        <!--FIM Sensores-->
+        <BR>
+        <!--Sensores Sala-->
+        <div class="row row-cols-3 d-flex justify-content-center">
+          <div class="col-2">
+            Sala
+          </div>
+          <div class="col-4.5">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z"/>
+              <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+              <path fill-rule="evenodd" d="M8 1.75a.25.25 0 0 1 .25.25v10a.25.25 0 1 1-.5 0V2A.25.25 0 0 1 8 1.75z"/>
+            </svg>
+            <span class="label label-info">
+              #s_temp_sala# ºC
+            </span>
+          </div>
+          <div class="col-4.5">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+              <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <span class="label label-info">
+              #s_humid_sala# %
+            </span>
+          </div>
+        </div>
+        <!--FIM Sensores-->
+        <BR>
+          <!--Sensores qrt-->
+          <div class="row row-cols-3 d-flex justify-content-center">
+            <div class="col-2">
+              Quarto
+            </div>
+            <div class="col-4.5">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                <path fill-rule="evenodd" d="M8 1.75a.25.25 0 0 1 .25.25v10a.25.25 0 1 1-.5 0V2A.25.25 0 0 1 8 1.75z" />
+              </svg>
+              <span class="label label-info">
+                #s_temp_qrt# ºC
+              </span>
+            </div>
+            <div class="col-4.5">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+              <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+            </svg>
+            <span class="label label-info">
+              #s_humid_qrt# %
+            </span>
+            </div>
+          </div>
+          <!--FIM Sensores-->
+          <BR>
+          <!--Sensores lab-->
+          <div class="row row-cols-3 d-flex justify-content-center">
+            <div class="col-2">
+              Lab
+            </div>
+            <div class="col-4.2">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                <path fill-rule="evenodd" d="M8 1.75a.25.25 0 0 1 .25.25v10a.25.25 0 1 1-.5 0V2A.25.25 0 0 1 8 1.75z" />
+              </svg>
+              <span class="label label-info">
+                #s_temp_lab# ºC
+              </span>
+            </div>
+            <div class="col-4.2">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
+                <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z" />
+              </svg>
+              <span class="label label-info">
+                #s_humid_lab# %
+              </span>
+            </div>
+          </div>          
+          <!--FIM Sensores-->
+          <BR>
+            <!--Sensores lab-->
+            <div class="row row-cols-3 d-flex justify-content-center">
+              <div class="col-2">
+                Print3D
+              </div>
+              <div class="col-4.2">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
+                  <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  <path fill-rule="evenodd" d="M8 1.75a.25.25 0 0 1 .25.25v10a.25.25 0 1 1-.5 0V2A.25.25 0 0 1 8 1.75z" />
+                </svg>
+                <span class="label label-info">
+                  #s_temp_3d# ºC
+                </span>
+              </div>
+              <div class="col-4.2">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
+                  <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z" />
+                </svg>
+                <span class="label label-info">
+                  #s_humid_3d# %
+                </span>
+              </div>
+            </div>          
+            <!--FIM Sensores-->
+  
+          
+
+
+         </div>
+    </div><!--FIM azul-->
+
+    <div class="alert alert-light text-center" role="alert"> <!--branco-->
+      <h6>
+        Horas: #i_horas#:#i_minutos#
+      </h6>
+      <h6>
+        <a href="http://192.168.15.110\">
+          Servidor
+        </a>
+        |
+        <a href="http://192.168.15.114">
+          Sala
+        </a>
+        |
+        <a href="http://192.168.15.111">
+          Quarto
+        </a>
+        |
+        <a href="http://192.168.15.112\">
+          Lab
+        </a>
+        |
+        <a href="http://192.168.15.115\">
+          Print3D
+        </a>
+        |
+        <a href="http://192.168.15.113\">
+          Irrigação
+        </a>
+      </h6>
+    </div>
+    
+  </div>
+</body>
+</html>
