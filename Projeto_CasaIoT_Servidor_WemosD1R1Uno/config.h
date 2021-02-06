@@ -254,7 +254,7 @@ void  configReset() {
   strlcpy(HOST_MQTT,        "192.168.0.0"    , sizeof(HOST_MQTT)); //broker ESP_Sala
   PORT_MQTT = 1883;
   strlcpy(USER_MQTT,        "admin"            , sizeof(USER_MQTT)); 
-  strlcpy(PASS_MQTT,        "developer@2020"   , sizeof(PASS_MQTT)); 
+  strlcpy(PASS_MQTT,        "****"   , sizeof(PASS_MQTT)); 
   strlcpy(TOPICO_SUBSCRIBE, "/serv/sub", sizeof(TOPICO_SUBSCRIBE)); 
   strlcpy(TOPICO_PUBLISH,   "/serv/pub", sizeof(TOPICO_PUBLISH)); 
   strlcpy(TOPICO_PUBLISH_T, "/serv/t"  , sizeof(TOPICO_PUBLISH_T)); 
