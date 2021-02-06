@@ -398,7 +398,6 @@ void f_AtivaSomTeclas(boolean b_valor) {
 }
 
 
-
 void f_SensorMovimentoPIR_v1(){
   iSensorPIR = digitalRead(pinSensorPIR);
   if (iSensorPIR == 1)
