@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="version" content=#versao#>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>#ID_esp#</title>
+</head>
+<body>
+    <div class="col-md-5">
+      <div class="alert alert-danger text-center" role="alert"> <!--vermelho-->
+        <h2 class="text-center">
+             Configurações #ID_esp#
+        </h2>
+        <h6>
+          <a href="dashboard">Dashboard</a> |
+          <a href="info">Informações</a> |
+          <a href="config">Configuração</a> 
+        </h6>
+        <h7>
+          <a href="reconfig" onclick="return confirm("Reconfigurar módulo?")">Reconfigurar</a> |
+          <a href="reboot"   onclick="return confirm("Reiniciar módulo?")">Reiniciar</a>
+        </h7>
+      </div>
+
+      <form name="config" action="configSave" method="post">
+        <div class="alert alert-danger text-highlight" role="alert"> <!--vermelho-->
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              ID ESP: 
+            </div>
+            <div class="col-5">
+              <input type="text" name="ID_esp" value="#ID_esp#" size="15" maxlength="15">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              SSID Wi-Fi: 
+            </div>
+            <div class="col-5">
+              <input type="text" name="ssid" value="#ssid#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              Senha: 
+            </div>
+            <div class="col-5">
+              <input type="password" name="pw" value="#pw#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              hostname OTA: 
+            </div>
+            <div class="col-5">
+              <input type="hostnameOTA" name="hostnameOTA" value="#hostnameOTA#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              IPfixo: 
+            </div>
+            <div class="col-5">
+              <input type="IPfixo" name="IPfixo" value="#IPfixo#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              Rele 01
+            </div>
+            <div class="col-5">
+              <input type="text" name="cRele1" value="#cRele1#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              Sensor 01
+            </div>
+            <div class="col-5">
+              <input type="text" name="cSensores" value="#cSensores#" size="20" maxlength="20">
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              Time Fita Led
+            </div>
+            <div class="col-5">
+              <input type="text" name="ihrsProgMin" value="#ihrsProgMin#" size="2" maxlength="2"> minutos
+            </div>
+          </div>
+          <div class="row row-cols-2 d-flex justify-content-highlight">
+            <div class="col-4">
+              Horas:
+            </div>
+            <div class="col-5">
+              <input type="text" name="i_horas"   value="#i_horas#" size="2" maxlength="2">
+              :
+              <input type="text" name="i_minutos" value="#i_minutos#" size="1" maxlength="2">
+            </div>
+          </div>
+
+
+        </div> <!--FIM vermelho-->
+
+        <div class="alert alert-light text-center" role="alert"> <!--branco-->
+          <!--Botao salvar-->
+          <div class="row row-cols-2">
+      		  <input class="btn btn-large btn-success" id="save"     type="submit" value="Gravar"   onClick="return confirm("Gravar a configuração?")">
+      	  	<input class="btn btn-large btn-danger"  id="cancelar" type="submit" value="Cancelar" onClick="confirm("Cancelar as alterações?")">
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

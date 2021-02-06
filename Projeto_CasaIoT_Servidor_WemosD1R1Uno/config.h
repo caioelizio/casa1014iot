@@ -240,14 +240,14 @@ void initSerial(){
 
 void  configReset() {
   Serial.println(F("Assumindo valores da configuração padrão"));
-  strlcpy(ID_esp,             "Servidor"          , sizeof(ID_esp)); 
+  strlcpy(ID_esp,           "Servidor"          , sizeof(ID_esp)); 
 //  bootCount  = 0;
-  strlcpy(ssid,             ""     , sizeof(ssid));
-  strlcpy(pw,               ""        , sizeof(pw)); 
+  strlcpy(ssid,             ""                  , sizeof(ssid));
+  strlcpy(pw,               ""                  , sizeof(pw)); 
 //  strlcpy(ssid,             "wiff_sala"         , sizeof(ssid));
 //  strlcpy(pw,               "pedroludovico"     , sizeof(pw)); 
   strlcpy(hostnameOTA,      "EspD1miniServ"     , sizeof(hostnameOTA)); 
-  strlcpy(IPfixo,           "192.168.0.0"    , sizeof(IPfixo));
+  strlcpy(IPfixo,           "192.168.0.0"       , sizeof(IPfixo));
   //MQTT
   strlcpy(ID_MQTT,          "Serv"      , sizeof(ID_MQTT));
   //strlcpy(HOST_MQTT,      "broker.hivemq.com" , sizeof(HOST_MQTT));
