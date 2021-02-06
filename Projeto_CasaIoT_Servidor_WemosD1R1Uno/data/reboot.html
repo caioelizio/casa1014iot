@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=auto">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </link>
+  <title>Reiniciar ESP Lab</title>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="card alert alert-info text-center " role="alert">
+      <!--azul-->
+      Reiniciando... Aguarde <span id="time">10</span> segundos
+    </div>
+  </div>
+
+  <script>
+    let time = 10
+
+    const labelTime = time => {
+      const label = document.querySelector("#time")
+      label.innerHTML = time
+    }
+
+    setInterval(() => {
+      if (time == 0) window.location = "/"
+
+      labelTime(--time)
+    }, 1000)
+
+  </script>
+</body>
+
+</html>

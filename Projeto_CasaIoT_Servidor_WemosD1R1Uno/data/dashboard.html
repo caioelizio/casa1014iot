@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="version" content=#versao#>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- bootstrap4-toggle-->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+
+    <title>#ID_esp#</title>
+</head>
+
+<body>
+    <header>
+        <div
+            class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Casa 1014</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="dashboard.html">Dashboard</a>
+                <a class="p-2 text-dark" href="info.html">Informações</a>
+                <a class="p-2 text-dark" href="config.html">Configurações</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <!-- <h2 class="mb-3">Dashboard</h2> -->
+        <div class="card mb-3 border-success">
+            <div class="card-body">
+                <!-- <div class="card-title">Controle</div> -->
+
+                <div class="d-flex mb-3  justify-content-between align-items-center">
+                    <img src="images/think_on.svg" width="32" alt="" srcset="">
+                    <h5 class="mb-0">Lâmpada</h5>
+                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="outline-success"
+                        data-offstyle="outline-danger">
+                </div>
+
+                <div class="d-flex mb-3 justify-content-between align-items-center">
+                    <img src="images/fan.svg" width="32" alt="" srcset="">
+                    <h5 class="mb-0">Ventilador</h5>
+                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="outline-success"
+                        data-offstyle="outline-danger">
+                </div>
+
+                <div class="d-flex mb-3  justify-content-between align-items-center">
+                    <img src="images/stopwatch_on.svg" width="32" alt="" srcset="">
+                    <h5 class="mb-0">Time Luz</h5>
+                    <input type="checkbox" checked data-toggle="toggle" data-onstyle="outline-success"
+                        data-offstyle="outline-danger">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card mb-3 border-danger">
+            <div class="card-body d-flex justify-content-center">
+                <a href="/tudoff" class="btn btn-lg btn-danger">Tudo off</a>
+            </div>
+        </div>
+
+        <div class="card mb-3 border-primary">
+            <div class="card-body">
+                <!-- <div class="card-title">Sensores</div> -->
+                <div class="d-flex flex-column mb-3">
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-3 text-info">Servidor</div>
+                        <div class="col-4">
+                            <img src="images/temp.svg" alt="" width="24px">
+                            #s_temp# ºC</div>
+                        <div class="col-4">
+                            <img src="images/humd.svg" alt="" width="24px">
+                            #s_humid# %</div>
+                    </div>
+
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-3 text-info">Sala</div>
+                        <div class="col-4">
+                            <img src="images/temp.svg" alt="" width="24px">
+                            #s_temp_sala# ºC</div>
+                        <div class="col-4">
+                            <img src="images/humd.svg" alt="" width="24px">
+                            #s_humid_sala# %</div>
+                    </div>
+
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-3 text-info">Quarto</div>
+                        <div class="col-4">
+                            <img src="images/temp.svg" alt="" width="24px">
+                            #s_temp_qrt# ºC</div>
+                        <div class="col-4">
+                            <img src="images/humd.svg" alt="" width="24px">
+                            #s_humid_qrt# %</div>
+                    </div>
+
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-3 text-info">Lab</div>
+                        <div class="col-4">
+                            <img src="images/temp.svg" alt="" width="24px">
+                            #s_temp_lab# ºC</div>
+                        <div class="col-4">
+                            <img src="images/humd.svg" alt="" width="24px">
+                            #s_humid_lab# %</div>
+                    </div>
+
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-3 text-info">Print3D</div>
+                        <div class="col-4">
+                            <img src="images/temp.svg" alt="" width="24px">
+                            #s_temp_3d# ºC
+                        </div>
+                        <div class="col-4">
+                            <img src="images/humd.svg" alt="" width="24px">
+                            #s_humid_3d# %
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+
+            <div class="col-12 ">
+                <ul class="list-unstyled text-small d-flex flex-wrap justify-content-around">
+                    <li><a class="text-primary" href="http://192.168.15.110">Servidor</a></li>
+                    <li><a class="text-primary" href="http://192.168.15.114">Sala</a></li>
+                    <li><a class="text-primary" href="http://192.168.15.111">Quarto</a></li>
+                    <li><a class="text-primary" href="http://192.168.15.112">Lab</a></li>
+                    <li><a class="text-primary" href="http://192.168.15.115">Print3D</a></li>
+                    <li><a class="text-primary" href="http://192.168.15.113">Irrigação</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 ">
+                <h5 class="text-center">Horas: #i_horas#:#i_minutos#</h5>
+                <small class="d-block mb-3 text-muted">© 2020-2021</small>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+</body>
+
+</html>

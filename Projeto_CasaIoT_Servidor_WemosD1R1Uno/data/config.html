@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="version" content=#versao#>
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>#ID_esp#</title>
+</head>
+
+<body>
+   <header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Casa 1014</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="dashboard.html">Dashboard</a>
+        <a class="p-2 text-dark" href="info.html">Informações</a>
+        <a class="p-2 text-dark" href="config.html">Configurações</a>
+        <!-- <a class="p-2 text-dark" href="reconfig.html" onclick="return confirm('Reconfigurar módulo?')">Reconfigurar</a> -->
+      </nav>
+      <a class="btn btn-outline-primary" href="reboot.html" onclick="return confirm('Reiniciar módulo?')">Reiniciar</a>
+    </div>
+  </header>
+
+  
+  <div class="container mt-5">
+    <div class="card-deck mb-3 text-center ">
+      <div class="card mb-4 shadow-sm  border-success">
+        <div class="card-header  border-primary">
+          <h4 class="my-0 font-weight-normal text-info">Configuração</h4>
+        </div>
+        <div class="card-body">
+          <form name="config" action="configSave" method="post" class="needs-validation" novalidate=""></form>
+
+          <div class="mb-3">
+            <label for="username">ID Esp8266</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="ID_esp" id="ID_esp" value="#ID_esp#" size="15"
+                maxlength="15" placeholder="" required="">
+              <div class="invalid-feedback" style="width: 100%;">
+                Identificação é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">SSID Wi-Fi</label>
+              <input type="text" class="form-control" name="ssid" value="#ssid#" size="20" maxlength="20">
+              <div class="invalid-feedback">
+                SSID do Wifi é obrigatório.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="pw">Senha</label>
+              <input type="password" class="form-control" name="pw" value="#pw#" size="20" maxlength="20">
+              <div class="invalid-feedback">
+                Senha é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="hostnameOTA">hostname OTA</label>
+            <input type="text" class="form-control" name="hostnameOTA" value="#hostnameOTA#" size="20" maxlength="20">
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="IPfixo">IP <span class="text-muted">(Fixo)</span></label>
+            <input type="text" class="form-control" name="IPfixo" value="#IPfixo#" size="20" maxlength="20">
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country">Rele 01</label>
+              <input type="text" class="form-control" name="cRele1" value="#cRele1#" size="20" maxlength="20">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="state">Sensor 01</label>
+              <input type="text" class="form-control" name="cSensores" value="#cSensores#" size="20" maxlength="20">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="zip">Time Fita Led</label>
+              <input type="text" class="form-control" name="ihrsProgMin" value="#ihrsProgMin#" size="2" maxlength="2">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Horas</label>
+              <input type="text" class="form-control" name="i_horas" value="#i_horas#" size="2" maxlength="2">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Minutos</label>
+              <input type="text" class="form-control" name="i_minutos" value="#i_minutos#" size="1" maxlength="2">
+            </div>
+          </div>
+
+          <div class="row justify-content-around">
+            <div class="col-md-3 mb-3 col-off-1 ">
+              <button type="button" class="btn btn-outline-success  btn-block"
+                onClick="return confirm('Gravar a configuração?')">Gravar</button>
+            </div>
+
+            <div class="col-md-3 mb-3 ">
+              <button type="button" class="btn btn-outline-danger btn-block"
+                onClick="confirm('Cancelar as alterações?')">Cancelar</button>
+            </div>
+          </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
