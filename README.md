@@ -17,4 +17,3 @@ PCB_sala![PCB_sala](https://github.com/caioelizio/casa1014iot/blob/master/PCB_sa
 interruptor three way![interruptor three way](https://github.com/caioelizio/casa1014iot/blob/master/interruptor%20three%20way.jpg)
 
 Websever ESP da Sala![Websever ESP da Sala](https://github.com/caioelizio/casa1014iot/blob/master/websever_sala.jpg)
-
