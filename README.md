@@ -12,6 +12,10 @@ Lista de Peças:<BR>
 1 Remoto IR<BR>
 1 controle remoto creative<BR>
 <BR>
-![Alt text](https://github.com/caioelizio/casa1014iot/blob/master/PCB_sala.jpg)
+![PCB_sala](https://github.com/caioelizio/casa1014iot/blob/master/PCB_sala.jpg)
 ![Alt text](https://github.com/caioelizio/casa1014iot/blob/master/interruptor%20three%20way.jpg)
+<BR>
+Websever ESP da Sala 
+![Websever ESP da Sala](https://github.com/caioelizio/casa1014iot/blob/master/websever_sala.jpg)
+
 
