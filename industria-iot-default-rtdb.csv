@@ -1,4 +1,4 @@
-_key,data,hora,id,temp
+key,data,hora,id,temp
 NodeMCU-0001-1,11/03/2021,12:01,1,43
 NodeMCU-0001-2,11/03/2021,12:01,2,42
 NodeMCU-0001-3,11/03/2021,12:01,3,69
